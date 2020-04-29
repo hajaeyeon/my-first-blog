@@ -7,16 +7,19 @@
             <h1><a href="">Jay's Blog</a></h1>
         </div>
 
-        <div>
-            <p>published: 29.04.2020, 12:14</p>
+      
+            {{<p>published: 29.04.2020, 12:14</p>
             <h2><a href="">My first post</a></h2>
             <p>first</p>
-         </div>
 
-         <div>
             <p>published: 29.04.2020, 12:14</p>
             <h2><a href="">My second post</a></h2>
-            <p>second</p>
-        </div>
+            <p>second</p>}}
     </body>
 </html>
+
+{{posts}}
+[<Post: My second post>, <Post: My first post>]
+{% for post in posts %}
+    {{ post }}
+{% endfor %}
